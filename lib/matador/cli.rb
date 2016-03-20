@@ -6,8 +6,7 @@ class Matador::CLI
     address
     list_geolocation
     elements
-    atomospheric_element
-    peace_out
+    good_luck
   end
 
   def address
@@ -18,34 +17,51 @@ class Matador::CLI
   def list_geolocation
     #lists latitiude and longitude
     @here = Matador::Location.here
-    #@here.each.with_index(1) do |here, i|  #prob don't need index for mine but let's see if it works first
-    puts "#{here.lattitude}, #{here.longitude}."
-    #end
+    puts "Your precise location is #{here.lattitude}, #{here.longitude}."
   end
 
-  def elements # i don't know what this method does yet
-    require "pry" ; binding.pry
-    @element = Matador::Scraper.element
+  def wind
+    @wind = Matador::Scraper.scrape_noaa_weather.wind
   end
 
-  def atomospheric_element #menu
-    puts "Would you like pressure, wind, or temp info? "
+  def humidity
+    @humidity = Matador::Scraper.scrape_noaa_weather.humidity
+  end
+
+  def visibility
+    @visibility = Matador::Scraper.scrape_noaa_weather.visibility
+  end
+
+  def temp
+    @temp = Matador::Scraper.scrape_noaa_weather.temp
+  end
+
+  def pressure
+    @pressure = Matador::Scraper.scrape_noaa_weather.pressure
+  end
+
+  def elements
+    puts "What data do you require for your location?"
     input = nil
     while input != "exit"
       input = gets.strip.downcase
       if input == "wind"
-        puts "20 MPR NW"
-      elsif input == "pressure"
-        puts "25 PSI"
+        puts "wind is #{wind}"
+      elsif input == "humidity"
+        puts "humidity is #{humidity}"
+      elsif input == "visibility"
+        puts "visibility is currently #{visibility}"
       elsif input == "temp"
-        puts "45 degrees"
+        puts "temp is currently #{temp}"
+      elsif input == "pressure"
+        puts "pressure is currently #{pressure}"
       else
-        "Please enter pressure, wind, or temp."
+        "At this time I only have pressure, wind, humidity, visibility or temp data."
       end
     end
   end
 
-  def peace_out
+  def good_luck
     puts "
     May the force be with you.
     "
