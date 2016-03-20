@@ -5,6 +5,8 @@ class Matador::Location
     #should return coordinates based on location
     #returns your location as an instance
 
+    #self.scrape_noaa_weather
+
     location_1 = self.new
     location_1.lattitude = 41.117496
     location_1.longitude = -73.418262

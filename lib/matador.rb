@@ -1,4 +1,6 @@
 require 'nokogiri'
+require 'open-uri'
+require 'pry'
 
 require_relative "./matador/version"
 require_relative './matador/cli'

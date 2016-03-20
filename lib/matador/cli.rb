@@ -23,7 +23,7 @@ class Matador::CLI
     #end
   end
 
-  def elements
+  def elements # i don't know what this method does yet
     require "pry" ; binding.pry
     @element = Matador::Scraper.element
   end
