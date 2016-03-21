@@ -1,18 +1,20 @@
 class Matador::Scraper
   attr_accessor :lattitude, :longitude, :location_url, :temp, :pressure, :humidity, :wind, :visibility
 
-  # def initialize
-  #   # @location_url = location_url
-  # #   #gets lattitude and longitude from Location class
-  # #   @location = Matador::Location.location
+  # def lattitude
+  #   @lattitude = Matador::CLI.list_geolocation[0]
+  # end
+  #
+  # def longitude
+  #   @longitude = Matador::CLI.list_geolocation[1]
   # end
 
-  #elements = []
-
   def self.scrape_noaa_weather
-    #location_url = Matador::Location.geolocation_url
+    lattitude = Matador::CLI.list_geolocation[0]
+    longitude = Matador::CLI.list_geolocation[1]
+    location_url= "http://forecast.weather.gov/MapClick.php?lat=#{lattitude}&lon=#{longitude}"
 
-    doc = Nokogiri::HTML(open('http://forecast.weather.gov/MapClick.php?lat=40.781581302919285&lon=-73.96648406982422'))
+    doc = Nokogiri::HTML(open(location_url))
 
     location = self.new
     location.temp = doc.search("p.myforecast-current-lrg").text
