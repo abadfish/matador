@@ -9,54 +9,37 @@ class Matador::CLI
     good_luck
   end
 
-  def self.address
+  def address
     puts "Please enter your address: "
     input = gets.strip
   end
 
   def list_geolocation
-    @here = Matador::Location.here
+    @here = Matador::Location.here(address)
     puts "Your precise location is #{here.lattitude}, #{here.longitude}."
   end
 
-  def temp
-    @temp = Matador::Scraper.scrape_noaa_weather.temp
+  def fetch_scraper_data
+    @location = Matador::Scraper.scrape_noaa_weather(@here.lattitude, @here.longitude)
   end
-
-  def pressure
-    @pressure = Matador::Scraper.scrape_noaa_weather.pressure
-  end
-
-  def humidity
-    @humidity = Matador::Scraper.scrape_noaa_weather.humidity
-  end
-
-  def wind
-    @wind = Matador::Scraper.scrape_noaa_weather.wind
-  end
-
-  def visibility
-    @visibility = Matador::Scraper.scrape_noaa_weather.visibility
-  end
-
-
 
   def elements
+    fetch_scraper_data
     puts "What data do you require for your location?"
     input = nil
     while input != "exit"
       input = gets.strip.downcase
       if input == "temp"
-        puts "temp is currently #{temp}"
+        puts "temp is currently #{@location.temp}"
       elsif input == "pressure"
-        puts "pressure is currently #{pressure}"
+        puts "pressure is currently #{@location.pressure}"
       elsif input == "humidity"
-        puts "humidity is currently #{humidity}"
+        puts "humidity is currently #{@location.humidity}"
       elsif input == "wind"
-        puts "wind is currently #{wind}"
+        puts "wind is currently #{@location.wind}"
       elsif input == "visibility"
-        puts "visibility is currently #{visibility}"
-      else
+        puts "visibility is currently #{@location.visibility}"
+      elsif input != "visibility" && input != "wind" && input != "humidity" && input != "pressure" && input != "temp" && input != "exit"
         puts "At this time I only have pressure, wind, humidity, visibility or temp data."
       end
     end
