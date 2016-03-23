@@ -1,8 +1,6 @@
 # Matador
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/matador`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Matador is a gem designed to give you atmospheric data for the exact spot you choose, such as temperature, humidity, barometric pressure, wind speed and direction, and visibility.
 
 ## Installation
 
@@ -22,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Using Matador is fairly simple. It asks for your location, for which you can give is an exact address or simply a zip code. Then it will ask you what sort of data you are looking to aquire about that location. For the time-being your choices are "wind," "pressure," "temp," "humidity", and "visibility."
 
 ## Development
 
@@ -32,10 +30,9 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/matador. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/abadfish/matador. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
