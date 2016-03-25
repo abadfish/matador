@@ -10,13 +10,13 @@ class Matador::CLI
   end
 
   def address
-    puts "Please enter your address: "
+    puts "Please enter your address for specific data or a zip code for data on a general area: "
     input = gets.strip
   end
 
   def list_geolocation
     @here = Matador::Location.here(address)
-    puts "Your precise location is #{here.lattitude}, #{here.longitude}."
+    puts "Your requested location is #{here.lattitude}, #{here.longitude}."
   end
 
   def fetch_scraper_data
@@ -25,11 +25,11 @@ class Matador::CLI
 
   def elements
     fetch_scraper_data
-    puts "What data do you require for your location?"
+    puts "What data do you require for your location? I can give you temperature, pressure, humidity, wind, or visibility."
     input = nil
     while input != "exit"
       input = gets.strip.downcase
-      if input == "temp"
+      if input == "temperature"
         puts "temp is currently #{@location.temp}"
       elsif input == "pressure"
         puts "pressure is currently #{@location.pressure}"
@@ -39,7 +39,7 @@ class Matador::CLI
         puts "wind is currently #{@location.wind}"
       elsif input == "visibility"
         puts "visibility is currently #{@location.visibility}"
-      elsif input != "visibility" && input != "wind" && input != "humidity" && input != "pressure" && input != "temp" && input != "exit"
+      elsif input != "visibility" && input != "wind" && input != "humidity" && input != "pressure" && input != "temperature" && input != "exit"
         puts "At this time I only have pressure, wind, humidity, visibility or temp data."
       end
     end

@@ -16,3 +16,5 @@ CLI Gem - Matador
 http://mynasadata.larc.nasa.gov/latitudelongitude-finder/
 
 http://railscasts.com/episodes/273-geocoder?autoplay=true
+
+http:// predictwind.com
