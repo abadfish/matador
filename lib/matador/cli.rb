@@ -2,7 +2,8 @@ class Matador::CLI
   attr_accessor :here, :input
 
   def call
-    puts "How can I help you win this race?"
+    puts "Welcome to the Matador CLI gem!"
+    puts "How can I help you today?"
 
     list_geolocation
     elements
