@@ -1,7 +1,7 @@
-require 'nokogiri', "~> 0"
+require 'nokogiri'
 require 'open-uri'
 require 'pry'
-require 'geocoder', "~> 0"
+require 'geocoder'
 
 require_relative "./matador/version"
 require_relative './matador/cli'
