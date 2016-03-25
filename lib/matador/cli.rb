@@ -11,7 +11,8 @@ class Matador::CLI
   end
 
   def address
-    puts "Please enter your address for specific data or a zip code for data on a general area: "
+    puts "Please enter your address for specific data
+    or a zip code for data on a general area: "
     input = gets.strip
   end
 
@@ -26,7 +27,8 @@ class Matador::CLI
 
   def elements
     fetch_scraper_data
-    puts "What data do you require for your location? I can give you temperature, pressure, humidity, wind, or visibility."
+    puts "What data do you require for your location?"
+    puts "I can give you temperature, pressure, humidity, wind, or visibility."
     input = nil
     while input != "exit"
       input = gets.strip.downcase
