@@ -12,7 +12,8 @@ class Matador::CLI
 
   def address
     puts "Please enter your address for specific data
-    or a zip code for data on a general area: "
+    or a zip code for data on a general area:
+    "
     input = gets.strip
   end
 

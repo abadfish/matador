@@ -23,6 +23,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "pry"
-  spec.add_dependency "nokogiri"
-  spec.add_dependency "geocoder"
+  spec.add_dependency "nokogiri", "~> 0"
+  spec.add_dependency "geocoder", "~> 0"
 end
