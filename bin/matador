@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
-# require './lib/matador'
 require "bundler/setup"
 require "matadore"
 
-Matador::CLI.new.call
+Matadore::CLI.new.call

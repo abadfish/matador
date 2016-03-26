@@ -11,5 +11,4 @@ class Matadore::Location
     location_1.longitude = Geocoder.coordinates(address)[1]
     location_1
   end
-
 end
