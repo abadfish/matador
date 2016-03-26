@@ -1,8 +1,8 @@
-require_relative '../matador'
+require_relative '../matadore'
 require_relative 'cli'
 
 
-class Matador::Location
+class Matadore::Location
   attr_accessor :lattitude, :longitude, :location_1, :address, :input
 
   def self.here(address)

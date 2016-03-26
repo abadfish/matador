@@ -1,4 +1,4 @@
-CLI Gem - Matador
+CLI Gem - Matadore
 
 1. Plan CLI Data Gem, imagine interface
 2. Project structure

@@ -2,6 +2,6 @@
 
 # require './lib/matador'
 require "bundler/setup"
-require "matador"
+require "matadore"
 
 Matador::CLI.new.call

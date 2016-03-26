@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in matador.gemspec
+# Specify your gem's dependencies in matadore.gemspec
 gemspec

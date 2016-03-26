@@ -1,8 +1,8 @@
-class Matador::CLI
+class Matadore::CLI
   attr_accessor :here, :input
 
   def call
-    puts "Welcome to the Matador CLI gem!
+    puts "Welcome to the Matadore CLI gem!
     "
     sleep 0.75
     puts "How can I help you today?
@@ -22,13 +22,13 @@ class Matador::CLI
   end
 
   def list_geolocation
-    @here = Matador::Location.here(address)
+    @here = Matadore::Location.here(address)
     puts "Your requested location is #{here.lattitude}, #{here.longitude}.
     "
   end
 
   def fetch_scraper_data
-    @location = Matador::Scraper.scrape_noaa_weather(@here.lattitude, @here.longitude)
+    @location = Matadore::Scraper.scrape_noaa_weather(@here.lattitude, @here.longitude)
   end
 
   def elements

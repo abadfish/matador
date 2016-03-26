@@ -1,4 +1,4 @@
-class Matador::Scraper
+class Matadore::Scraper
   attr_accessor :lattitude, :longitude, :location_url, :temp, :pressure, :humidity, :wind, :visibility
 
   def self.scrape_noaa_weather(lattitude, longitude)

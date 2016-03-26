@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe Matador do
+describe Matadore do
   it 'has a version number' do
-    expect(Matador::VERSION).not_to be nil
+    expect(Matadore::VERSION).not_to be nil
   end
 
   it 'does something useful' do

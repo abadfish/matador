@@ -7,7 +7,7 @@ Matador is a gem designed to give you atmospheric data for the exact spot you ch
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'matador'
+gem 'matadore'
 ```
 
 And then execute:
@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-Using Matador is fairly simple. It asks for your location, for which you can give is an exact address or simply a zip code. Then it will ask you what sort of data you are looking to aquire about that location. For the time-being your choices are "wind," "pressure," "temp," "humidity", and "visibility."
+Using Matadore is fairly simple. It asks for your location, for which you can give is an exact address or simply a zip code. Then it will ask you what sort of data you are looking to acquire about that location. For the time-being your choices are "wind," "pressure," "temp," "humidity", and "visibility."
 
 ## Development
 
@@ -30,7 +30,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/abadfish/matador. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/abadfish/matadore. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
